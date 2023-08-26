@@ -1,0 +1,10 @@
+//*Rodar prompt (na aba ts)
+//node .\teste.js
+//criar arquivo tsc .\teste.ts
+
+
+//Modelo
+//import * as promptSync from 'prompt-sync'
+//const prompt = promptSync();
+//const name = prompt('What is your name?');
+//console.log(`Hello, ${name}! Welcome to Code in Piece!`);
