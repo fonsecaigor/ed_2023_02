@@ -1,7 +1,7 @@
 class MyArray {
     private elements: number[];
 
-    const(elements: number[]) {
+    constructor(elements: number[]) {
         this.elements = elements;
     }
 
@@ -15,25 +15,23 @@ class MyArray {
         }
     }
 
-    imprimirReverso(i: number = this.elements.length - 1): number[] {
+    imprimirReverso(i: number = this.elements.length - 1): void {
         // Verifica se o índice está dentro dos limites do array
         if (i >= 0) {
             // Retorna o elemento atual e chama recursivamente para o elemento anterior
-            return [this.elements[i], ...this.imprimirReverso(i - 1)];
-        } else {
-            // Quando o índice se torna negativo, todos os elementos foram processados
-            return [];
+            console.log(this.elements[i]);
+            this.imprimirReverso(i - 1);
         }
     }
 }
 
 // Exemplo de uso da classe MyArray
-const myArray = new MyArray();
+const elementos = [1, 2, 3, 4, 5];
+const myArray = new MyArray(elementos);
 
 console.log("Elementos do array:");
 myArray.imprimirRecursivo();
 
 console.log("Elementos do array em ordem reversa:");
-const elementosRevertidos = myArray.imprimirReverso();
-console.log(elementosRevertidos);
+myArray.imprimirReverso();
 
