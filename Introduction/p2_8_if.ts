@@ -5,7 +5,7 @@ class MyArray {
     this.elements = elements;
   }
 
-  imprimirRecursivo(i: number = 0): void {
+  imprimirRecursivo(i: number): void {
     // Verifica se o índice está dentro dos limites do array
     if (i < this.elements.length) {
       // Imprime o elemento atual
@@ -31,7 +31,7 @@ const elementos = [1, 2, 3, 4, 5];
 const myArray = new MyArray(elementos);
 
 console.log("Elementos do array:");
-myArray.imprimirRecursivo();
+myArray.imprimirRecursivo(0);
 
 console.log("Elementos do array em ordem reversa:");
 myArray.imprimirReverso();
